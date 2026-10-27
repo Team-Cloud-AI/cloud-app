@@ -5,6 +5,6 @@ Team Cloud - North American AI Challenge
 
 **Users:** First Place AZ residents / Arizona Autism Charter Schools
 
-**Team:** Kevin, JJ, Jose (+ others)
+**Team:** Kevin, JJ, Jose, Sam, Manuel
 
 **Visit notes:** see notes/first-place-visit.md
