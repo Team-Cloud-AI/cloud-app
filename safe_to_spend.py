@@ -31,7 +31,6 @@ class Wallet:
     def new_day(self): 
         self.today_left = self.daily
 bmoney = Wallet(1000)
-sherlyn = Wallet(500)
 bmoney.purchase("lunch", 8)
 bmoney.purchase("charger", 20)
 bmoney.new_day()
