@@ -15,11 +15,11 @@ class Wallet:
         #day setter
         self.day_counter = 0
         self.left_over = allowance - phone - groceries - eatingOut - emergency
-        print(self.left_over)
+        print(round(self.left_over, 2))
 
         self.daily = self.left_over / 30
         self.today_left = self.daily
-        print(self.daily)
+        print(round(self.daily, 2))
     # purchase function
     def purchase(self, name, amount):
 
@@ -27,8 +27,8 @@ class Wallet:
 
         self.left_over = self.left_over - amount #tracks month
 
-        print(self.today_left)
-        print(self.left_over)
+        print(round(self.today_left, 2))
+        print(round(self.left_over, 2))
     # day reset function
     def new_day(self): 
         self.day_counter += 1
