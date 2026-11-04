@@ -14,7 +14,9 @@ class Wallet:
         emergency = 200
         #day setter
         self.day_counter = 0
+        self.list_purchases = []
         self.left_over = allowance - phone - groceries - eatingOut - emergency
+        # negative budget warning 
         if 0 > self.left_over:
             print("You are going to be negative!!")
         print(round(self.left_over, 2))
@@ -29,6 +31,9 @@ class Wallet:
 
         self.left_over = self.left_over - amount #tracks month
 
+        self.list_purchases.append((name, amount))
+            
+
         print(round(self.today_left, 2))
         print(round(self.left_over, 2))
     # day reset function
@@ -42,3 +47,4 @@ bmoney.purchase("lunch", 8)
 bmoney.purchase("charger", 20)
 bmoney.new_day()
 bmoney.purchase("dinner", 6)
+print(bmoney.list_purchases)
