@@ -24,7 +24,7 @@ class Wallet:
 
         self.daily = self.left_over / 30
         self.today_left = self.daily
-        print(round(self.daily, 2))
+        print(f"Daily Budget: ${self.daily:.2f}")
     # purchase function
     def purchase(self, name, amount):
 
@@ -37,8 +37,8 @@ class Wallet:
             print("You are negative for the day!!")
             
 
-        print(round(self.today_left, 2))
-        print(round(self.left_over, 2))
+        print(f"Left Today: ${self.today_left:.2f}")
+        print(f"Left this month: ${self.left_over:.2f}")
     # day reset function
     def new_day(self): 
         self.day_counter += 1
@@ -48,7 +48,6 @@ class Wallet:
         self.daily = self.left_over / (30 - self.day_counter)
         self.today_left = self.daily
 bmoney = Wallet(1000)
-sherlyn = Wallet(500)
 bmoney.purchase("lunch", 8)
 bmoney.purchase("charger", 20)
 bmoney.new_day()
