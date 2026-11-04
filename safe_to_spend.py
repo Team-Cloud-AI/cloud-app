@@ -51,7 +51,7 @@ class Wallet:
     def summary_purchases(self):
         print("=====SUMMARY=====")
         for name, amount in self.list_purchases:
-            print(f"{name}: ${amount}")
+            print(f"{name}: ${amount:.2f}")
 #calls wallet
 bmoney = Wallet(1000)
 #sample purchases
