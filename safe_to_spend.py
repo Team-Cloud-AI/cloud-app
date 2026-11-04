@@ -15,6 +15,8 @@ class Wallet:
         #day setter
         self.day_counter = 0
         self.left_over = allowance - phone - groceries - eatingOut - emergency
+        if 0 > self.left_over:
+            print("You are going to be negative!!")
         print(round(self.left_over, 2))
 
         self.daily = self.left_over / 30
@@ -35,6 +37,7 @@ class Wallet:
         self.daily = self.left_over / (30 - self.day_counter)
         self.today_left = self.daily
 bmoney = Wallet(1000)
+sherlyn = Wallet(500)
 bmoney.purchase("lunch", 8)
 bmoney.purchase("charger", 20)
 bmoney.new_day()
