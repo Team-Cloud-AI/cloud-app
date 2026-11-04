@@ -36,7 +36,7 @@ class Wallet:
         if 0 > self.today_left:
             print("You are negative for the day!!")
             
-
+        #monthly and daily changes to total
         print(f"Left Today: ${self.today_left:.2f}")
         print(f"Left this month: ${self.left_over:.2f}")
     # day reset function
@@ -47,12 +47,20 @@ class Wallet:
             self.day_counter = 0
         self.daily = self.left_over / (30 - self.day_counter)
         self.today_left = self.daily
+    #Summary of Purchases 
+    def summary_purchases(self):
+        print("=====SUMMARY=====")
+        for name, amount in self.list_purchases:
+            print(f"{name}: ${amount}")
+#calls wallet
 bmoney = Wallet(1000)
+#sample purchases
 bmoney.purchase("lunch", 8)
 bmoney.purchase("charger", 20)
 bmoney.new_day()
 bmoney.purchase("dinner", 6)
-print(bmoney.list_purchases)
+bmoney.summary_purchases()
+#test: 31 days to check month reset
 for i in range(31):
     bmoney.new_day()
     print(round(bmoney.daily, 2))
