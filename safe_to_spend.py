@@ -12,7 +12,8 @@ class Wallet:
         groceries = 250
         eatingOut = 125
         emergency = 200
-        self.day_counter = 1
+        #day setter
+        self.day_counter = 0
         self.left_over = allowance - phone - groceries - eatingOut - emergency
         print(self.left_over)
 
@@ -30,8 +31,9 @@ class Wallet:
         print(self.left_over)
     # day reset function
     def new_day(self): 
-        self.today_left = self.daily
         self.day_counter += 1
+        self.daily = self.left_over / (30 - self.day_counter)
+        self.today_left = self.daily
 bmoney = Wallet(1000)
 bmoney.purchase("lunch", 8)
 bmoney.purchase("charger", 20)
