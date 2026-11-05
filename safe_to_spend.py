@@ -4,33 +4,36 @@
 #
 #
 import anthropic
+#connection to anthropic API, send messages to claude
 client = anthropic.Anthropic()
+#claude prompt for mascot
 NIMBUS_PROMPT = """You are Nimbus, the cloud mascot for Cloud Financial, a budgeting app.
 You talk to someone new to budgeting, usually a neurodivergent young adult who just moved out or started college.
 You react to their purchases, what they have left today and this month, and any spending patterns you notice.
 Be strict about money. Only joke when there's a clear opening, keep humor obvious, never sarcastic, and never be mean.
 Never use more than 18 words."""
 class Wallet:
-    # wallet constructor
+    # wallet constructor; creates the wallet
     def __init__(self, allowance):
+        #total amount of money for month
         self.allowance = allowance
         # monthly fixed costs
-        self.phone = 50 
-        self.groceries = 250
-        self.eatingOut = 125
-        self.emergency = 200
-        #day setter
+        self.phone = 50 #phone bill allocation
+        self.groceries = 250 #cost of groceries
+        self.eatingOut = 125 #cost of eating out
+        self.emergency = 200 #cost of emergencies
+        #day setter; day of the month ; increments with each new day
         self.day_counter = 0
         #list of purchases
         self.list_purchases = []
-        self.left_over = allowance - self.phone - self.groceries - self.eatingOut - self.emergency
+        self.left_over = allowance - self.phone - self.groceries - self.eatingOut - self.emergency #whats left after monthly 
         # negative budget warning 
         if 0 > self.left_over:
             print("You are going to be negative!!")
         print(f"Monthly budget: ${self.left_over:.2f}")
 
-        self.daily = self.left_over / 30
-        self.today_left = self.daily
+        self.daily = self.left_over / 30            #budget for today
+        self.today_left = self.daily                   #amount available for each day and decrements with each purchase
         print(f"Daily Budget: ${self.daily:.2f}")
     # purchase function
     def purchase(self, name, amount):
@@ -48,7 +51,15 @@ class Wallet:
         print(f"Left this month: ${self.left_over:.2f}")
     def ask_nimbus(self, name, amount):
         message = f"this is the name of the purchase the user made {name} and this is the amount that it cost {amount} and there is {self.left_over:.2f} left for the month and {self.today_left:.2f} left for the day"
-                
+        response = client.messages.create(
+    model="claude-haiku-5-5",
+    max_tokens=1000,
+    system=NIMBUS_PROMPT,
+    messages=[{"role": "user", "content": message}],
+)  
+        for block in message.content:
+    if block.type == "text":
+        print(block.text)      
     # day reset function
     def new_day(self): 
         self.day_counter += 1
