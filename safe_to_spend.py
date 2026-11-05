@@ -3,6 +3,13 @@
 # Is also able to reset days.
 #
 #
+import anthropic
+client = anthropic.Anthropic()
+NIMBUS_PROMPT = """You are Nimbus, the cloud mascot for Cloud Financial, a budgeting app.
+You talk to someone new to budgeting, usually a neurodivergent young adult who just moved out or started college.
+You react to their purchases, what they have left today and this month, and any spending patterns you notice.
+Be strict about money. Only joke when there's a clear opening, keep humor obvious, never sarcastic, and never be mean.
+Never use more than 18 words."""
 class Wallet:
     # wallet constructor
     def __init__(self, allowance):
@@ -35,10 +42,13 @@ class Wallet:
         self.list_purchases.append((name, amount))
         if 0 > self.today_left:
             print("You are negative for the day!!")
-            
+    
         #monthly and daily changes to total
         print(f"Left Today: ${self.today_left:.2f}")
         print(f"Left this month: ${self.left_over:.2f}")
+    def ask_nimbus(self, name, amount):
+        message = f"this is the name of the purchase the user made {name} and this is the amount that it cost {amount}"
+                
     # day reset function
     def new_day(self): 
         self.day_counter += 1
