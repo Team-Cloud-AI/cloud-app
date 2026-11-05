@@ -47,7 +47,7 @@ class Wallet:
         print(f"Left Today: ${self.today_left:.2f}")
         print(f"Left this month: ${self.left_over:.2f}")
     def ask_nimbus(self, name, amount):
-        message = f"this is the name of the purchase the user made {name} and this is the amount that it cost {amount}"
+        message = f"this is the name of the purchase the user made {name} and this is the amount that it cost {amount} and there is {self.left_over:.2f} left for the month and {self.today_left:.2f} left for the day"
                 
     # day reset function
     def new_day(self): 
