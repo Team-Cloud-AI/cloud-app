@@ -20,3 +20,6 @@ Team Cloud - North American AI Challenge
 - Simulated data only, no real payments
 
 **Visit notes:** see notes/first-place-visit.md
+
+
+Have a mascot that is static and healthy and it doesnt look so good as you do or do not feed it.
