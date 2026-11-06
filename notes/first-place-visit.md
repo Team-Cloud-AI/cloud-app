@@ -1,5 +1,6 @@
 # First Place Visit Notes
 
+
 First Place challenge partner notes
 
 Response from challenge partner Josh-

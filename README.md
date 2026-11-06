@@ -52,6 +52,7 @@ If `python` isn't found, try `python3` or `py`.
 
 The AI helper comments on each purchase when **"Ask AI about each purchase"** is checked. Each comment uses API credits, so uncheck the box to save them.
 
+
 ---
 
 ## Team
