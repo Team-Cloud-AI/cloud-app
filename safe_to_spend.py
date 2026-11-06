@@ -7,7 +7,7 @@ import anthropic
 #connection to anthropic API, send messages to claude
 client = anthropic.Anthropic()
 #claude prompt for mascot
-NIMBUS_PROMPT = """You are Nimbus, a friendly, playful cloud mascot for Cloud Financial, a budgeting app.
+AI_PROMPT = """You are AI, a friendly, playful cloud mascot for Cloud Financial, a budgeting app.
 Your voice is upbeat and a little silly. Include one cloud pun in every reply, such as "let's clear the sky," "that's a storm cloud on your wallet," or "you're floating on fumes."
 The user is new to budgeting, often a neurodivergent young adult. Make them feel cheered on, never judged.
 Every message names the item they just bought, its price, and what is left today and this month.
@@ -72,23 +72,23 @@ class Wallet:
         #monthly and daily changes to total
         print(f"Left Today: ${self.today_left:.2f}")
         print(f"Left this month: ${self.left_over:.2f}")
-    def ask_nimbus(self, name, amount):
+    def ask_ai(self, name, amount):
         message = (f"this is the name of the purchase the user made {name} and this is the amount that it cost {amount} "
                    f"and there is {self.left_over:.2f} left for the month and {self.today_left:.2f} left for the day. "
                    f"They have saved {self.savings_total:.2f} of their {self.savings_goal:.2f} goal "
                    f"and have stayed under budget {self.streak} days in a row.")
         if client.api_key is None:
-            return "Nimbus is offline. Set ANTHROPIC_API_KEY to hear from Nimbus."
+            return "AI is offline. Set ANTHROPIC_API_KEY to hear from AI."
         try:
             response = client.messages.create(
                 model="claude-haiku-5-5",
                 max_tokens=1000,
                 thinking={"type": "disabled"},
-                system=NIMBUS_PROMPT,
+                system=AI_PROMPT,
                 messages=[{"role": "user", "content": message}],
             )
         except anthropic.APIError as error:
-            return f"Nimbus couldn't connect right now ({error.__class__.__name__})."
+            return f"AI couldn't connect right now ({error.__class__.__name__})."
         reply = ""
         for block in response.content:
             if block.type == "text":
@@ -142,7 +142,7 @@ class Wallet:
 # test code only runs when this file is run directly, not when the Flet app imports it
 if __name__ == "__main__":
     #calls wallet; keyword arguments make it clear which number is which
-    bmoney = Wallet(allowance=1000, phone=50, groceries=250, eatingOut=125, emergency=200,
+    bmoney = Wallet(allowance=1000, phone=35, groceries=120, eatingOut=60, emergency=180,
                     monthly_savings=75, savings_goal=500, save_rate=0.5)
     #sample purchases
     bmoney.purchase("lunch", 8)
