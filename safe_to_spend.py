@@ -141,7 +141,7 @@ class Wallet:
 # test code only runs when this file is run directly, not when the Flet app imports it
 if __name__ == "__main__":
     #calls wallet; keyword arguments make it clear which number is which
-    bmoney = Wallet(allowance=1000, phone=50, groceries=250, eatingOut=125, emergency=200,
+    bmoney = Wallet(allowance=1000, phone=35, groceries=120, eatingOut=60, emergency=180,
                     monthly_savings=75, savings_goal=500, save_rate=0.5)
     #sample purchases
     bmoney.purchase("lunch", 8)
