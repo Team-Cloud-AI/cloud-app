@@ -58,12 +58,12 @@ The AI helper comments on each purchase when **"Ask AI about each purchase"** is
 
 - Kevin + Jose: code (safe-to-spend math)
 - JJ: pitch script + Cleo / YNAB / Copilot comparison
-- Manuel: hardware (order NFC stickers, design/print card, test tap, program stickers)
 - Sam: canvas update
 
 ## Future enhancements
 
 - Tap-to-purchase, sticker links
+- Hardware: order NFC stickers, design/print card, test tap, program stickers
 - Physical card with NFC tap for the demo
 - Simulated data only, no real payments
 
