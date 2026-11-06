@@ -55,13 +55,13 @@ def main(page: ft.Page):
         return ft.TextField(label=label, value=str(value), keyboard_type=ft.KeyboardType.NUMBER,
                             dense=True)
 
-    allowance_in = number_field("Monthly allowance ($)", 1000)
+    allowance_in = number_field("Monthly allowance ($)", 2000)
     phone_in = number_field("Phone bill ($)", 50)
-    groceries_in = number_field("Groceries ($)", 250)
-    eating_out_in = number_field("Eating out ($)", 125)
+    groceries_in = number_field("Groceries ($)", 300)
+    eating_out_in = number_field("Eating out ($)", 150)
     emergency_in = number_field("Emergency fund ($)", 200)
-    savings_in = number_field("Pay yourself first! ($)", 75)
-    goal_in = number_field("Savings goal ($)", 500)
+    savings_in = number_field("Pay yourself first! ($)", 100)
+    goal_in = number_field("Savings goal ($)", 1000)
     rate_in = number_field("Save this % of unspent daily money", 50)
 
     def create_wallet(e):
