@@ -56,9 +56,10 @@ The AI helper comments on each purchase when **"Ask AI about each purchase"** is
 
 ## Team
 
-- Kevin + Jose: code (safe-to-spend math)
-- JJ: pitch script + Cleo / YNAB / Copilot comparison
-- Sam: canvas update
+- Kevin + Jose: backend and front end coders
+- JJ: pitch script, Cleo / YNAB / Copilot comparison, essays
+- Manuel: essays
+- Sam: canvas update, slides
 
 ## Future enhancements
 
