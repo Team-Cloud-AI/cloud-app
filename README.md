@@ -16,8 +16,6 @@ cloud-app/
 └── README.md
 ```
 
-`UX-UI.py` imports `safe_to_spend.py`, so **keep both files in the same folder**.
-
 ---
 
 ## Requirements
@@ -36,6 +34,7 @@ cloud-app/
    UX-UI.py
    safe_to_spend.py
    ```
+   `UX-UI.py` imports `safe_to_spend.py`, so **keep both files in the same folder**.
 2. **Install the libraries:**
    ```
    pip install flet anthropic
@@ -49,15 +48,22 @@ If `python` isn't found, try `python3` or `py`.
 
 ---
 
+## AI helper
+
+The AI helper comments on each purchase when **"Ask AI about each purchase"** is checked. Each comment uses API credits, so uncheck the box to save them.
+
+---
+
 ## Team
 
-- Kevin + Jose: code (safe-to-spend math, tap-to-purchase, sticker links)
+- Kevin + Jose: code (safe-to-spend math)
 - JJ: pitch script + Cleo / YNAB / Copilot comparison
 - Manuel: hardware (order NFC stickers, design/print card, test tap, program stickers)
 - Sam: canvas update
 
 ## Future enhancements
 
+- Tap-to-purchase, sticker links
 - Physical card with NFC tap for the demo
 - Simulated data only, no real payments
 
