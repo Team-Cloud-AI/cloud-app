@@ -23,7 +23,7 @@ There's a lot of potential in your concept; keep exploring the bigger vision whi
 
 First Place – Challenge Partner Notes
 
-Below are some of the recurring challenges and concerns discussed by First Place, along with how frequently they occur.
+Below are some of the recurring challenges and concerns discussed by First Place, along with how frequently they occur and the problem behind it.
 
   1. Cooking Skills and Independence
 Frequency: Daily
