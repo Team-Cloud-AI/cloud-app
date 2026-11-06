@@ -10,8 +10,8 @@ Cloud Financial is a wallet app for someone living on their own for the first ti
 
 ```
 cloud-app/
-├── UX-UI.py           # the app: screens and buttons (run this file)
-├── safe_to_spend.py   # the logic: budget math and Nimbus messages
+├── UX-UI.py           # FRONT END: screens and buttons (run this file)
+├── safe_to_spend.py   # BACK END: budget math and Nimbus messages
 ├── notes/             # team notes
 └── README.md
 ```
@@ -31,11 +31,7 @@ cloud-app/
 
 ## Run the app
 
-1. **Get the code:**
-   ```
-   git clone https://github.com/Team-Cloud-AI/cloud-app.git
-   cd cloud-app
-   ```
+1. **Get the files:** download `UX-UI.py` and `safe_to_spend.py` from the repository into the same folder.
 2. **Install the libraries:**
    ```
    pip install flet anthropic
