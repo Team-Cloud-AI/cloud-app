@@ -1,6 +1,6 @@
 # First Place Visit Notes
 
-
+(Challenge partner Advice)
 Thanks for sharing your team's idea! It was great to meet your teammate yesterday. Glad the tour of First Place–Phoenix is already sparking ideas for your team. A few things I'd encourage your team to consider as you develop a concept:
 What will motivate someone to use the tool? It's one thing to build a functional tool, but another to create something someone wants to engage with consistently. Some individuals may be motivated by seeing their progress, earning rewards, or reaching financial goals. Others may not immediately connect how saving money, developing skills, or making everyday decisions contributes to their independence.
 How might the tool reinforce positive behaviors and make those connections meaningful? I like the idea of gamification, but would encourage you to think about what makes those rewards personally motivating. Not everyone will respond to the same incentives.
