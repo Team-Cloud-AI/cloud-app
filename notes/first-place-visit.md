@@ -65,6 +65,6 @@ Cooking skills and independence.
 
 Tracking personal development and skill progress.
 
-These two areas appear to present the greatest opportunities for improvement based on the recurring challenges discussed.
+Based on our discussions with our challenge partner, we identified two areas that present significant opportunities for improvement: cooking skills and personal development tracking. As a team, we also discussed focusing on the financial aspect of independent living, particularly helping neurodivergent individuals better understand, manage, and develop their financial skills. Financial independence was identified as one of the priority concerns raised by our challenge partner. We believe that developing tools and resources to support budgeting, money management, and financial literacy could help individuals build confidence and become more independent in managing their finances.
 
 
