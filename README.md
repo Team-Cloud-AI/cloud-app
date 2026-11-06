@@ -56,7 +56,7 @@ If `python` isn't found, try `python3` or `py`.
 - Manuel: hardware (order NFC stickers, design/print card, test tap, program stickers)
 - Sam: canvas update
 
-## Locked decisions
+## Future enhancements
 
 - Physical card with NFC tap for the demo
 - Simulated data only, no real payments
