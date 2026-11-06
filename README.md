@@ -1,25 +1,70 @@
 # Cloud Financial
-Team Cloud - North American AI Challenge
 
-**Problem:** First Place residents in their first weeks of living on their own get a monthly allowance (rent already paid) but have never budgeted, so the money runs out before the month ends.
+Team Cloud's app for the North American AI Challenge.
 
-**Users:** First Place AZ residents in their first weeks of living alone
+Cloud Financial is a wallet app for someone living on their own for the first time on a monthly allowance. Its core feature is **"safe to spend today"**: it tells the user how much they can spend today so their money lasts the whole month. Nimbus, a cloud mascot, explains each purchase in plain language.
 
-**Core feature:** Safe to spend today
-- safe today = (balance - bills due before month end) / days left in month
-- AI explains it in calm, simple language before they spend
+---
 
-**Team:**
+## Project structure
+
+```
+cloud-app/
+├── UX-UI.py           # the app: screens and buttons (run this file)
+├── safe_to_spend.py   # the logic: budget math and Nimbus messages
+├── notes/             # team notes
+└── README.md
+```
+
+`UX-UI.py` imports `safe_to_spend.py`, so **keep both files in the same folder**.
+
+---
+
+## Requirements
+
+- Python 3.10 or newer
+- [Flet](https://flet.dev), the Python UI library the app is built on
+- [Anthropic Python SDK](https://pypi.org/project/anthropic/), for Nimbus
+- An Anthropic API key in the `ANTHROPIC_API_KEY` environment variable (optional: without it, Nimbus shows "offline" and everything else still works)
+
+---
+
+## Run the app
+
+1. **Get the code:**
+   ```
+   git clone https://github.com/Team-Cloud-AI/cloud-app.git
+   cd cloud-app
+   ```
+2. **Install the libraries:**
+   ```
+   pip install flet anthropic
+   ```
+3. **Run the app:**
+   ```
+   python UX-UI.py
+   ```
+
+If `python` isn't found, try `python3` or `py`.
+
+---
+
+## Nimbus
+
+Nimbus comments on each purchase when **"Ask Nimbus about each purchase"** is checked. Each comment uses API credits, so uncheck the box to save them.
+
+---
+
+## Team
+
 - Kevin + Jose: code (safe-to-spend math, tap-to-purchase, sticker links)
 - JJ: pitch script + Cleo / YNAB / Copilot comparison
 - Manuel: hardware (order NFC stickers, design/print card, test tap, program stickers)
 - Sam: canvas update
 
-**Locked decisions:**
+## Locked decisions
+
 - Physical card with NFC tap for the demo
 - Simulated data only, no real payments
 
-**Visit notes:** see notes/first-place-visit.md
-
-
-Have a mascot that is static and healthy and it doesnt look so good as you do or do not feed it.
+Visit notes: see `notes/first-place-visit.md`.
